@@ -7,9 +7,14 @@ import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.studentslist.models.Student
+import com.example.studentslist.repositories.StudentsRepository
 import com.google.android.material.appbar.MaterialToolbar
 
 class ActivityStudentDetails : AppCompatActivity() {
+
+    private var student: Student? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_student_details)
@@ -23,7 +28,7 @@ class ActivityStudentDetails : AppCompatActivity() {
         val idField = findViewById<TextView>(R.id.student_details_id)
         val phoneField = findViewById<TextView>(R.id.student_details_phone)
         val addressField = findViewById<TextView>(R.id.student_details_address)
-        val isPresentField = findViewById<CheckBox>(R.id.student_details_checkbox)
+        val isCheckedField = findViewById<CheckBox>(R.id.student_details_checkbox)
         val editButton = findViewById<Button>(R.id.edit_button_details)
 
         val studentId = intent.getStringExtra("STUDENT_ID")
@@ -33,14 +38,31 @@ class ActivityStudentDetails : AppCompatActivity() {
             return
         }
 
-        // TODO: find student and show it's data
+        val found = StudentsRepository.students.firstOrNull { s -> s.id == studentId }
+        if (found == null) {
+            Toast.makeText(this, "Student not found", Toast.LENGTH_SHORT).show()
+            finish()
+            return
+        }
+        student = found
+
+        nameField.text = found.name
+        idField.text = found.id
+        phoneField.text = found.phoneNumber
+        addressField.text = found.address
+        isCheckedField.isChecked = found.isChecked
+
+        isCheckedField.setOnCheckedChangeListener { _, isChecked ->
+            student?.isChecked = isChecked
+        }
 
         editButton.setOnClickListener {
             val i = Intent(this, ActivityEditStudent::class.java)
-            // TODO: send the id of the student to the edit form
+            i.putExtra("STUDENT_ID", student!!.id)
             startActivity(i)
 
             finish()
         }
     }
 }
+
