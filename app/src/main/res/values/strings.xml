@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">StudentsList</string>
+    <string name="empty_students_list">No Students Available</string>
 </resources>
