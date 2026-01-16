@@ -13,4 +13,7 @@
     <string name="student_id_hint">Enter student ID</string>
     <string name="student_phone_hint">Enter phone number</string>
     <string name="student_address_hint">Enter address</string>
+    <string name="empty_students_list">No Students Available</string>
+    <string name="default_id_placeholder">Default</string>
+    <string name="default_name_placeholder">Default</string>
 </resources>
