@@ -1,5 +1,18 @@
 <resources>
     <string name="app_name">StudentsList</string>
+    <string name="checked_student">Is present?</string>
+    <string name="edit_button">Edit</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="save_button">Save</string>
+    <string name="delete_button">Delete</string>
+    <string name="student_name_header">Name:</string>
+    <string name="student_id_header">Id:</string>
+    <string name="student_phone_header">Phone:</string>
+    <string name="student_address_header">Address:</string>
+    <string name="student_name_hint">Enter student name</string>
+    <string name="student_id_hint">Enter student ID</string>
+    <string name="student_phone_hint">Enter phone number</string>
+    <string name="student_address_hint">Enter address</string>
     <string name="empty_students_list">No Students Available</string>
     <string name="default_id_placeholder">Default</string>
     <string name="default_name_placeholder">Default</string>

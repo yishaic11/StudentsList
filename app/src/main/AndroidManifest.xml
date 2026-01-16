@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentsList">
         <activity
+            android:name=".ActivityNewStudent"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityEditStudent"
+            android:exported="true" />
+        <activity
+            android:name=".ActivityStudentDetails"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
