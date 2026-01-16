@@ -22,13 +22,13 @@ class StudentsAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val student = data[position]
 
-        holder.id?.text = student.id
-        holder.name?.text = student.name
-        holder.avatar?.setImageResource(R.drawable.student_avatar)
-        holder.isPresentCheckBox.isChecked = student.isPresent
+        holder.idView?.text = student.id
+        holder.nameView?.text = student.name
+        holder.avatarView?.setImageResource(R.drawable.student_avatar)
+        holder.isCheckedView.isChecked = student.isChecked
 
         holder.itemView.setOnClickListener { onStudentItemClick(student) }
-        holder.isPresentCheckBox.setOnCheckedChangeListener { _, isChecked ->
+        holder.isCheckedView.setOnCheckedChangeListener { _, isChecked ->
             onCheckBoxClick(
                 student,
                 isChecked

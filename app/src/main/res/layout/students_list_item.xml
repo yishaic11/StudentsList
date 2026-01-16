@@ -9,7 +9,7 @@
     android:padding="4dp">
 
     <ImageView
-        android:id="@+id/student_avatar"
+        android:id="@+id/students_list_item_avatar"
         android:layout_width="2dp"
         android:layout_height="44dp"
         android:layout_weight="1"
@@ -22,22 +22,22 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/student_name"
+            android:id="@+id/students_list_item_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="studentName" />
+            android:text="@string/default_name_placeholder" />
 
         <TextView
-            android:id="@+id/student_id"
+            android:id="@+id/students_list_item_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="studentId" />
+            android:text="@string/default_id_placeholder" />
     </LinearLayout>
 
     <CheckBox
-        android:id="@+id/is_present"
+        android:id="@+id/students_list_item_is_present"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />

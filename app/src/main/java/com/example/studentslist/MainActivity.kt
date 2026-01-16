@@ -55,16 +55,12 @@ class MainActivity : AppCompatActivity() {
                 // TODO: Link click event to student details form activity
             },
             onCheckBoxClick = { student, isChecked ->
-                student.isPresent = isChecked
+                student.isChecked = isChecked
             })
         recyclerView.adapter = adapter
     }
 
     private fun setNoStudentsMessage() {
-        /* This method updates the visibility of the recycler view
-           (responsible to display students list) and the no-students-message
-           if there are no students
-        */
         val hasStudents = StudentsRepository.students.isNotEmpty()
 
         recyclerView.visibility = if (hasStudents) View.VISIBLE else View.GONE
