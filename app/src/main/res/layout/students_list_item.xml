@@ -37,7 +37,7 @@
     </LinearLayout>
 
     <CheckBox
-        android:id="@+id/students_list_item_is_present"
+        android:id="@+id/students_list_item_is_checked"
         android:layout_width="1dp"
         android:layout_height="match_parent"
         android:layout_weight="1" />
