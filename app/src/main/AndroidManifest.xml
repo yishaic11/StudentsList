@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentsList">
         <activity
-            android:name=".ActivityNewStudents"
+            android:name=".ActivityNewStudent"
             android:exported="true" />
         <activity
             android:name=".ActivityEditStudent"

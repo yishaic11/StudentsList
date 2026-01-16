@@ -57,9 +57,9 @@ class ActivityStudentDetails : AppCompatActivity() {
         }
 
         editButton.setOnClickListener {
-            val i = Intent(this, ActivityEditStudent::class.java)
-            i.putExtra("STUDENT_ID", student!!.id)
-            startActivity(i)
+            val intent = Intent(this, ActivityEditStudent::class.java)
+            intent.putExtra("STUDENT_ID", student!!.id)
+            startActivity(intent)
 
             finish()
         }
