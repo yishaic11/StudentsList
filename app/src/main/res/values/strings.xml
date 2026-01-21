@@ -18,4 +18,5 @@
     <string name="default_name_placeholder">Default</string>
     <string name="add_student_button_description">Add a new student</string>
     <string name="students_list_header_text">Students List</string>
+    <string name="student_list_item_avatar_description">Student Avatar</string>
 </resources>
