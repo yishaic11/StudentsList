@@ -12,14 +12,13 @@
         android:layout_width="0dp"
         android:layout_height="56dp"
         android:background="?attr/colorSurface"
-        android:textSize="50dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/arrow"
-        app:title="Edit Students"
-       />
+        app:title="Edit Students" />
 
     <ImageView
         android:id="@+id/student_edit_avatar"
@@ -166,6 +165,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="#BDBCBC"
+        android:buttonTint="@color/blue"
         android:text="@string/delete_button"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"

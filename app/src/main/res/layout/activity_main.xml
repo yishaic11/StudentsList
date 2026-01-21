@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
@@ -12,6 +13,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Students List"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.048"
@@ -24,7 +27,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="4dp"
         android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -51,15 +54,14 @@
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/add_strudent"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#BDBCBC"
-        android:clickable="true"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
         app:srcCompat="@android:drawable/ic_menu_add" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

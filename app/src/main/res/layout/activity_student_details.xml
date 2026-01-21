@@ -9,10 +9,11 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/student_details_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
         android:background="?attr/colorSurface"
-        android:textSize="100sp"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -130,6 +131,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:buttonTint="@color/blue"
+        android:checked="false"
         android:text="@string/checked_student"
         android:textAlignment="inherit"
         android:textColor="#000000"
@@ -139,13 +142,14 @@
 
     <Button
         android:id="@+id/edit_button_details"
-        android:layout_width="140dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#BDBCBC"
         android:text="@string/edit_button"
         android:textColor="#000000"
-        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
