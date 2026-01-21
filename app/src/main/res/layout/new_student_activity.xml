@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".ActivityNewStudent">
+    tools:context=".NewStudentActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/student_new_toolbar"
         android:layout_width="0dp"
         android:layout_height="56dp"
+        android:layout_marginTop="20dp"
         android:background="?attr/colorSurface"
-        android:textSize="50dp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -10,13 +10,13 @@ import com.example.studentslist.models.Student
 import com.example.studentslist.repositories.StudentsRepository
 import com.google.android.material.appbar.MaterialToolbar
 
-class ActivityEditStudent : AppCompatActivity() {
+class EditStudentActivity : AppCompatActivity() {
 
     private var student: Student? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_student)
+        setContentView(R.layout.edit_student_activity)
 
         val toolbar = findViewById<MaterialToolbar>(R.id.student_edit_toolbar)
         setSupportActionBar(toolbar)
