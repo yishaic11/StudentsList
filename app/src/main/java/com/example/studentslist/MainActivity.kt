@@ -1,5 +1,6 @@
 package com.example.studentslist
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.studentslist.adapters.StudentsAdapter
 import com.example.studentslist.models.Student
 import com.example.studentslist.repositories.StudentsRepository
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
     private lateinit var adapter: StudentsAdapter
@@ -39,7 +41,10 @@ class MainActivity : AppCompatActivity() {
         initRecyclerView()
         setNoStudentsMessage()
 
-        // TODO: Link click event on + button to new student form activity
+        findViewById<FloatingActionButton>(R.id.add_student).setOnClickListener {
+            val intent = Intent(this, ActivityNewStudent::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {
@@ -52,7 +57,9 @@ class MainActivity : AppCompatActivity() {
         adapter = StudentsAdapter(
             StudentsRepository.students,
             onStudentItemClick = { student: Student ->
-                // TODO: Link click event to student details form activity
+                val intent = Intent(this, ActivityStudentDetails::class.java)
+                intent.putExtra("STUDENT_ID", student.id)
+                startActivity(intent)
             },
             onCheckBoxClick = { student, isChecked ->
                 student.isChecked = isChecked
