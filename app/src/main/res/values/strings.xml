@@ -16,4 +16,6 @@
     <string name="empty_students_list">No Students Available</string>
     <string name="default_id_placeholder">Default</string>
     <string name="default_name_placeholder">Default</string>
+    <string name="add_student_button_description">Add a new student</string>
+    <string name="students_list_header_text">Students List</string>
 </resources>
