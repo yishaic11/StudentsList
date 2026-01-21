@@ -12,13 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudentsList">
         <activity
-            android:name=".ActivityNewStudent"
+            android:name=".NewStudentActivity"
             android:exported="true" />
         <activity
-            android:name=".ActivityEditStudent"
+            android:name=".EditStudentActivity"
             android:exported="true" />
         <activity
-            android:name=".ActivityStudentDetails"
+            android:name=".StudentDetailsActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

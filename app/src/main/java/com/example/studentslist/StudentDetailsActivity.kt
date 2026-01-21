@@ -11,13 +11,13 @@ import com.example.studentslist.models.Student
 import com.example.studentslist.repositories.StudentsRepository
 import com.google.android.material.appbar.MaterialToolbar
 
-class ActivityStudentDetails : AppCompatActivity() {
+class StudentDetailsActivity : AppCompatActivity() {
 
     private var student: Student? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_student_details)
+        setContentView(R.layout.student_details_activity)
 
         val toolbar = findViewById<MaterialToolbar>(R.id.student_details_toolbar)
         setSupportActionBar(toolbar)
@@ -57,7 +57,7 @@ class ActivityStudentDetails : AppCompatActivity() {
         }
 
         editButton.setOnClickListener {
-            val intent = Intent(this, ActivityEditStudent::class.java)
+            val intent = Intent(this, EditStudentActivity::class.java)
             intent.putExtra("STUDENT_ID", student!!.id)
             startActivity(intent)
 

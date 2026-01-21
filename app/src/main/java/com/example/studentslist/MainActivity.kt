@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         setNoStudentsMessage()
 
         findViewById<FloatingActionButton>(R.id.add_student).setOnClickListener {
-            val intent = Intent(this, ActivityNewStudent::class.java)
+            val intent = Intent(this, NewStudentActivity::class.java)
             startActivity(intent)
         }
     }
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         adapter = StudentsAdapter(
             StudentsRepository.students,
             onStudentItemClick = { student: Student ->
-                val intent = Intent(this, ActivityStudentDetails::class.java)
+                val intent = Intent(this, StudentDetailsActivity::class.java)
                 intent.putExtra("STUDENT_ID", student.id)
                 startActivity(intent)
             },
